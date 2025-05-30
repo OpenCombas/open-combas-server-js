@@ -8,7 +8,7 @@ import { MessageDecoder } from '../utils/message-decoder.util';
 @Injectable()
 export class GameServerService extends BaseUdpService {
   
-  private readonly NERO_MODE = true
+  private readonly NERO_MODE = false // Currently set to maintenance mode. Setting true will fail startup into Neroimus War. [Unsupported at this time]
   
   constructor() {
     super(1207, 'GAME_SERVER');
