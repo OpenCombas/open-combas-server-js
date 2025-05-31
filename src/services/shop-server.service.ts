@@ -25,6 +25,15 @@ export class SHOP_SERVER extends BaseUdpService {
       `\x1b[36m${xuidInfo}${playerInfo}${factionInfo}${sequenceInfo}${additionalInfo}\x1b[0m`
     );
 
+    const sequenceNum = parseInt(decoded.sequenceNumber);
+    if (!isNaN(sequenceNum) && sequenceNum > 33) {
+      const userXuid = decoded.xuid || 'Unknown';
+      this.logger.warn(
+        `[${this.label}] Warning: User ${decoded.gamertag} (XUID: ${userXuid}) ` +
+        `has exceeded 33 requests. Shop will be bugged for this user.`
+      );
+    }
+
 
     // Unfinished
     const response = Buffer.from('434800E330303030303030303030303030303030303030303030303200000000000000000000050000000E0064000100640002006400030064000400640005009600330096003400960035009600360096003700960038009600390096003A0096003B0096003C0096003D0096003E0096003F0096004000960041009600420096004300960044009600450096004600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000', 'hex');
