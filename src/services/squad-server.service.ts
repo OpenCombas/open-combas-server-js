@@ -3,6 +3,48 @@ import { BaseUdpService } from './base-udp.service';
 import { RemoteInfo } from 'dgram';
 import { MessageDecoder } from '../utils/message-decoder.util';
 
+interface TeamMember {
+  userId: string;
+  userName: string;
+  userRank: number;
+  leaderFlag: number;
+  userNumber: number;
+  xuid: string;
+}
+
+interface EmblemPattern {
+  patternId: number;
+  color: number;
+  angle: number;
+  expansionX: number;
+  expansionY: number;
+  coordX: number;
+  coordY: number;
+}
+
+interface TeamInfo {
+  teamName: string;
+  countryCode: string; // Always A, B, or C (faction codes)
+  numberOfMembers: number; // Max 20 members per squad
+  teamRank: number;
+  numberOfSorties: number; 
+  numberOfWins: number;
+  numberOfLosses: number; 
+  numberOfShootDowns: number;
+  numberOfConShootDowns: number;
+  numberOfCombasDowns: number;
+  numberOfCommandBaseDowns: number;
+  teamColors: number[][];
+  teamPattern: number;
+  teamProfile: number;
+  mainPlayTime: number;
+  language: string; // Should be a string IE, EN
+  strategy: number;
+  recruitType: number;
+  members: TeamMember[]; // Max 20 members per squad
+  emblemData: EmblemPattern[];
+}
+
 @Injectable()
 export class SquadServerService extends BaseUdpService {
   constructor() {
