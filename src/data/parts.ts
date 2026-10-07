@@ -1,6 +1,6 @@
 export interface Part {
-  /** Dense shop/runtime id: index in lang_id ascending order (not equal to lang_id). */
-  part_id: number;
+  /** Asset stem. The shop catalog id is packed from this name, for example `CK_CA001`. */
+  part_id: string;
   lang_id: number;
   part_name: string;
   part_type: string;
@@ -9,9 +9,10 @@ export interface Part {
   price: number;
 }
 
+/** Shop catalog. Rafzakael campaign parts are listed in `campaign-parts.ts`. */
 export const PARTS: Part[] = [
   {
-    part_id: 0,
+    part_id: "CK_CA001",
     lang_id: 1001,
     part_name: "M02CK Pickett",
     part_type: "cockpit",
@@ -19,7 +20,7 @@ export const PARTS: Part[] = [
     price: 16000
   },
   {
-    part_id: 1,
+    part_id: "CK_CA002",
     lang_id: 1002,
     part_name: "M07CK Brooke",
     part_type: "cockpit",
@@ -27,7 +28,7 @@ export const PARTS: Part[] = [
     price: 17500
   },
   {
-    part_id: 2,
+    part_id: "CK_CA003",
     lang_id: 1003,
     part_name: "M01CK Forrest",
     part_type: "cockpit",
@@ -35,7 +36,7 @@ export const PARTS: Part[] = [
     price: 14500
   },
   {
-    part_id: 3,
+    part_id: "CK_CA004",
     lang_id: 1004,
     part_name: "M03CK Jackson",
     part_type: "cockpit",
@@ -43,7 +44,7 @@ export const PARTS: Part[] = [
     price: 20000
   },
   {
-    part_id: 4,
+    part_id: "CK_CA031",
     lang_id: 1031,
     part_name: "MSK-C10",
     part_type: "cockpit",
@@ -51,7 +52,7 @@ export const PARTS: Part[] = [
     price: 12500
   },
   {
-    part_id: 5,
+    part_id: "CK_CA032",
     lang_id: 1032,
     part_name: "MSK-C20",
     part_type: "cockpit",
@@ -59,7 +60,7 @@ export const PARTS: Part[] = [
     price: 14000
   },
   {
-    part_id: 6,
+    part_id: "CK_CA061",
     lang_id: 1061,
     part_name: "C-Sal Kar",
     part_type: "cockpit",
@@ -67,7 +68,7 @@ export const PARTS: Part[] = [
     price: 16500
   },
   {
-    part_id: 7,
+    part_id: "CK_CA062",
     lang_id: 1062,
     part_name: "C-Naml",
     part_type: "cockpit",
@@ -75,7 +76,7 @@ export const PARTS: Part[] = [
     price: 18000
   },
   {
-    part_id: 8,
+    part_id: "CK_CA063",
     lang_id: 1063,
     part_name: "C-Dabbur",
     part_type: "cockpit",
@@ -83,7 +84,7 @@ export const PARTS: Part[] = [
     price: 18500
   },
   {
-    part_id: 9,
+    part_id: "CK_CA064",
     lang_id: 1064,
     part_name: "C-Ankabut",
     part_type: "cockpit",
@@ -91,7 +92,7 @@ export const PARTS: Part[] = [
     price: 20000
   },
   {
-    part_id: 10,
+    part_id: "CK_CB001",
     lang_id: 1301,
     part_name: "M04CK Stuart",
     part_type: "cockpit",
@@ -99,7 +100,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 11,
+    part_id: "CK_CB002",
     lang_id: 1302,
     part_name: "M05CK Johnston",
     part_type: "cockpit",
@@ -107,7 +108,7 @@ export const PARTS: Part[] = [
     price: 21000
   },
   {
-    part_id: 12,
+    part_id: "CK_CB003",
     lang_id: 1303,
     part_name: "M06CK Lee",
     part_type: "cockpit",
@@ -115,7 +116,7 @@ export const PARTS: Part[] = [
     price: 23000
   },
   {
-    part_id: 13,
+    part_id: "CK_CB031",
     lang_id: 1331,
     part_name: "MSK-C100",
     part_type: "cockpit",
@@ -123,7 +124,7 @@ export const PARTS: Part[] = [
     price: 16500
   },
   {
-    part_id: 14,
+    part_id: "CK_CB032",
     lang_id: 1332,
     part_name: "MSK-C110",
     part_type: "cockpit",
@@ -131,7 +132,7 @@ export const PARTS: Part[] = [
     price: 17500
   },
   {
-    part_id: 15,
+    part_id: "CK_CB061",
     lang_id: 1361,
     part_name: "C-Nahl",
     part_type: "cockpit",
@@ -139,7 +140,7 @@ export const PARTS: Part[] = [
     price: 22000
   },
   {
-    part_id: 16,
+    part_id: "CK_CB062",
     lang_id: 1362,
     part_name: "C-Jarad",
     part_type: "cockpit",
@@ -147,7 +148,7 @@ export const PARTS: Part[] = [
     price: 23500
   },
   {
-    part_id: 17,
+    part_id: "CK_CB063",
     lang_id: 1363,
     part_name: "C-Farasha",
     part_type: "cockpit",
@@ -155,7 +156,7 @@ export const PARTS: Part[] = [
     price: 25000
   },
   {
-    part_id: 18,
+    part_id: "CK_CC031",
     lang_id: 1631,
     part_name: "MSK-C1000",
     part_type: "cockpit",
@@ -163,7 +164,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 19,
+    part_id: "CK_CC032",
     lang_id: 1632,
     part_name: "MSK-C1500",
     part_type: "cockpit",
@@ -171,7 +172,7 @@ export const PARTS: Part[] = [
     price: 20000
   },
   {
-    part_id: 20,
+    part_id: "CK_CC033",
     lang_id: 1633,
     part_name: "MSK-C1001",
     part_type: "cockpit",
@@ -179,39 +180,7 @@ export const PARTS: Part[] = [
     price: 24000
   },
   {
-    part_id: 21,
-    lang_id: 1701,
-    part_name: "RFZ-CK-A1",
-    part_type: "cockpit",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 22,
-    lang_id: 1703,
-    part_name: "RFZ-CK-A2",
-    part_type: "cockpit",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 23,
-    lang_id: 1731,
-    part_name: "RFZ-CK-B1",
-    part_type: "cockpit",
-    faction: "B",
-    price: null
-  },
-  {
-    part_id: 24,
-    lang_id: 1761,
-    part_name: "RFZ-CK-A3",
-    part_type: "cockpit",
-    faction: "C",
-    price: null
-  },
-  {
-    part_id: 25,
+    part_id: "LG_TL001",
     lang_id: 2001,
     part_name: "M03TL Garfield",
     part_type: "mobility_base", // bipedal chassis
@@ -219,7 +188,7 @@ export const PARTS: Part[] = [
     price: 16000
   },
   {
-    part_id: 26,
+    part_id: "LG_TL002",
     lang_id: 2002,
     part_name: "M10TL Shaw",
     part_type: "mobility_base", // bipedal chassis
@@ -227,7 +196,7 @@ export const PARTS: Part[] = [
     price: 23000
   },
   {
-    part_id: 27,
+    part_id: "LG_TL003",
     lang_id: 2003,
     part_name: "M13TL Scott",
     part_type: "mobility_base", // bipedal chassis
@@ -235,7 +204,7 @@ export const PARTS: Part[] = [
     price: 21000
   },
   {
-    part_id: 28,
+    part_id: "LG_TL031",
     lang_id: 2031,
     part_name: "MSK-TL500",
     part_type: "mobility_base", // bipedal chassis
@@ -243,7 +212,7 @@ export const PARTS: Part[] = [
     price: 14000
   },
   {
-    part_id: 29,
+    part_id: "LG_TL032",
     lang_id: 2032,
     part_name: "MSK-TL501",
     part_type: "mobility_base", // bipedal chassis
@@ -251,7 +220,7 @@ export const PARTS: Part[] = [
     price: 16000
   },
   {
-    part_id: 30,
+    part_id: "LG_TL061",
     lang_id: 2061,
     part_name: "TL-Sal Kar",
     part_type: "mobility_base", // bipedal chassis
@@ -259,7 +228,7 @@ export const PARTS: Part[] = [
     price: 19500
   },
   {
-    part_id: 31,
+    part_id: "LG_TL062",
     lang_id: 2062,
     part_name: "TL-Dhib",
     part_type: "mobility_base", // bipedal chassis
@@ -267,7 +236,7 @@ export const PARTS: Part[] = [
     price: 21500
   },
   {
-    part_id: 32,
+    part_id: "LG_TL063",
     lang_id: 2063,
     part_name: "TL-Kalb",
     part_type: "mobility_base", // bipedal chassis
@@ -275,7 +244,7 @@ export const PARTS: Part[] = [
     price: 23000
   },
   {
-    part_id: 33,
+    part_id: "LG_RJ001",
     lang_id: 2301,
     part_name: "M01RJ Burns",
     part_type: "mobility_base", // inverse chassis
@@ -283,7 +252,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 34,
+    part_id: "LG_RJ002",
     lang_id: 2302,
     part_name: "M08RJ Hancock",
     part_type: "mobility_base", // inverse chassis
@@ -291,7 +260,7 @@ export const PARTS: Part[] = [
     price: 19500
   },
   {
-    part_id: 35,
+    part_id: "LG_RJ003",
     lang_id: 2303,
     part_name: "M17RJ Douglass",
     part_type: "mobility_base", // inverse chassis
@@ -299,7 +268,7 @@ export const PARTS: Part[] = [
     price: 23000
   },
   {
-    part_id: 36,
+    part_id: "LG_RJ031",
     lang_id: 2331,
     part_name: "MSK-RJ400",
     part_type: "mobility_base", // inverse chassis
@@ -307,7 +276,7 @@ export const PARTS: Part[] = [
     price: 14500
   },
   {
-    part_id: 37,
+    part_id: "LG_RJ032",
     lang_id: 2332,
     part_name: "MSK-RJ401",
     part_type: "mobility_base", // inverse chassis
@@ -315,7 +284,7 @@ export const PARTS: Part[] = [
     price: 16500
   },
   {
-    part_id: 38,
+    part_id: "LG_RJ061",
     lang_id: 2361,
     part_name: "RJ-Jamal",
     part_type: "mobility_base", // inverse chassis
@@ -323,7 +292,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 39,
+    part_id: "LG_RJ062",
     lang_id: 2362,
     part_name: "RJ-Naqa",
     part_type: "mobility_base", // inverse chassis
@@ -331,7 +300,7 @@ export const PARTS: Part[] = [
     price: 20500
   },
   {
-    part_id: 40,
+    part_id: "LG_ML001",
     lang_id: 2601,
     part_name: "M04ML Grant",
     part_type: "mobility_base", // multi chassis
@@ -339,7 +308,7 @@ export const PARTS: Part[] = [
     price: 18000
   },
   {
-    part_id: 41,
+    part_id: "LG_ML002",
     lang_id: 2602,
     part_name: "M09ML Dupont",
     part_type: "mobility_base", // multi chassis
@@ -347,7 +316,7 @@ export const PARTS: Part[] = [
     price: 19500
   },
   {
-    part_id: 42,
+    part_id: "LG_ML011",
     lang_id: 2611,
     part_name: "M15ML Sharman",
     part_type: "mobility_base", // multi chassis
@@ -355,7 +324,7 @@ export const PARTS: Part[] = [
     price: 22000
   },
   {
-    part_id: 43,
+    part_id: "LG_ML031",
     lang_id: 2631,
     part_name: "MSK-ML200",
     part_type: "mobility_base", // multi chassis
@@ -363,7 +332,7 @@ export const PARTS: Part[] = [
     price: 16000
   },
   {
-    part_id: 44,
+    part_id: "LG_ML032",
     lang_id: 2632,
     part_name: "MSK-ML201",
     part_type: "mobility_base", // multi chassis
@@ -371,7 +340,7 @@ export const PARTS: Part[] = [
     price: 17500
   },
   {
-    part_id: 45,
+    part_id: "LG_ML041",
     lang_id: 2641,
     part_name: "MSK-ML210",
     part_type: "mobility_base", // multi chassis
@@ -379,7 +348,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 46,
+    part_id: "LG_ML042",
     lang_id: 2642,
     part_name: "MSK-ML211",
     part_type: "mobility_base", // multi chassis
@@ -387,7 +356,7 @@ export const PARTS: Part[] = [
     price: 21500
   },
   {
-    part_id: 47,
+    part_id: "LG_ML061",
     lang_id: 2661,
     part_name: "ML-Thawr",
     part_type: "mobility_base", // multi chassis
@@ -395,7 +364,7 @@ export const PARTS: Part[] = [
     price: 23000
   },
   {
-    part_id: 48,
+    part_id: "LG_ML062",
     lang_id: 2662,
     part_name: "ML-Baqara",
     part_type: "mobility_base", // multi chassis
@@ -403,7 +372,7 @@ export const PARTS: Part[] = [
     price: 24500
   },
   {
-    part_id: 49,
+    part_id: "LG_CL001",
     lang_id: 2901,
     part_name: "M05CL Custer",
     part_type: "mobility_base", // treaded chassis
@@ -411,7 +380,7 @@ export const PARTS: Part[] = [
     price: 17000
   },
   {
-    part_id: 50,
+    part_id: "LG_CL002",
     lang_id: 2902,
     part_name: "M07CL Hooker",
     part_type: "mobility_base", // treaded chassis
@@ -419,7 +388,7 @@ export const PARTS: Part[] = [
     price: 18000
   },
   {
-    part_id: 51,
+    part_id: "LG_CL003",
     lang_id: 2903,
     part_name: "M14CL Meade",
     part_type: "mobility_base", // treaded chassis
@@ -427,7 +396,7 @@ export const PARTS: Part[] = [
     price: 19500
   },
   {
-    part_id: 52,
+    part_id: "LG_CL031",
     lang_id: 2931,
     part_name: "MSK-CL110",
     part_type: "mobility_base", // treaded chassis
@@ -435,7 +404,7 @@ export const PARTS: Part[] = [
     price: 17500
   },
   {
-    part_id: 53,
+    part_id: "LG_CL032",
     lang_id: 2932,
     part_name: "MSK-CL101",
     part_type: "mobility_base", // treaded chassis
@@ -443,7 +412,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 54,
+    part_id: "LG_CL033",
     lang_id: 2933,
     part_name: "MSK-CL100",
     part_type: "mobility_base", // treaded chassis
@@ -451,7 +420,7 @@ export const PARTS: Part[] = [
     price: 21000
   },
   {
-    part_id: 55,
+    part_id: "LG_CL061",
     lang_id: 2961,
     part_name: "CL-Himar",
     part_type: "mobility_base", // treaded chassis
@@ -459,7 +428,7 @@ export const PARTS: Part[] = [
     price: 20000
   },
   {
-    part_id: 56,
+    part_id: "LG_CL062",
     lang_id: 2962,
     part_name: "CL-Baghl",
     part_type: "mobility_base", // treaded chassis
@@ -467,7 +436,7 @@ export const PARTS: Part[] = [
     price: 21500
   },
   {
-    part_id: 57,
+    part_id: "LG_HL001",
     lang_id: 3201,
     part_name: "M06HL Cushing",
     part_type: "mobility_base", // hover chassis
@@ -475,7 +444,7 @@ export const PARTS: Part[] = [
     price: 20500
   },
   {
-    part_id: 58,
+    part_id: "LG_HL002",
     lang_id: 3202,
     part_name: "M12HL Wells",
     part_type: "mobility_base", // hover chassis
@@ -483,7 +452,7 @@ export const PARTS: Part[] = [
     price: 21500
   },
   {
-    part_id: 59,
+    part_id: "LG_HL031",
     lang_id: 3231,
     part_name: "MSK-HL600",
     part_type: "mobility_base", // hover chassis
@@ -491,7 +460,7 @@ export const PARTS: Part[] = [
     price: 13000
   },
   {
-    part_id: 60,
+    part_id: "LG_HL032",
     lang_id: 3232,
     part_name: "MSK-HL601",
     part_type: "mobility_base", // hover chassis
@@ -499,7 +468,7 @@ export const PARTS: Part[] = [
     price: 13500
   },
   {
-    part_id: 61,
+    part_id: "LG_HL061",
     lang_id: 3261,
     part_name: "HL-Ghazal",
     part_type: "mobility_base", // hover chassis
@@ -507,7 +476,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 62,
+    part_id: "LG_HL062",
     lang_id: 3262,
     part_name: "HL-Labua",
     part_type: "mobility_base", // hover chassis
@@ -515,7 +484,7 @@ export const PARTS: Part[] = [
     price: 20500
   },
   {
-    part_id: 63,
+    part_id: "LG_HL063",
     lang_id: 3263,
     part_name: "HL-Namir",
     part_type: "mobility_base", // hover chassis
@@ -523,7 +492,7 @@ export const PARTS: Part[] = [
     price: 22000
   },
   {
-    part_id: 64,
+    part_id: "LG_HL064",
     lang_id: 3264,
     part_name: "HL-Asad",
     part_type: "mobility_base", // hover chassis
@@ -531,7 +500,7 @@ export const PARTS: Part[] = [
     price: 24500
   },
   {
-    part_id: 65,
+    part_id: "LG_WL001",
     lang_id: 3501,
     part_name: "M02WL Grierson",
     part_type: "mobility_base", // wheeled chassis
@@ -539,7 +508,7 @@ export const PARTS: Part[] = [
     price: 16000
   },
   {
-    part_id: 66,
+    part_id: "LG_WL002",
     lang_id: 3502,
     part_name: "M11WL Sheridan",
     part_type: "mobility_base", // wheeled chassis
@@ -547,7 +516,7 @@ export const PARTS: Part[] = [
     price: 18000
   },
   {
-    part_id: 67,
+    part_id: "LG_WL003",
     lang_id: 3503,
     part_name: "M16WL Meagher",
     part_type: "mobility_base", // wheeled chassis
@@ -555,7 +524,7 @@ export const PARTS: Part[] = [
     price: 19500
   },
   {
-    part_id: 68,
+    part_id: "LG_WL031",
     lang_id: 3531,
     part_name: "MSK-WL300",
     part_type: "mobility_base", // wheeled chassis
@@ -563,7 +532,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 69,
+    part_id: "LG_WL032",
     lang_id: 3532,
     part_name: "MSK-WL310",
     part_type: "mobility_base", // wheeled chassis
@@ -571,7 +540,7 @@ export const PARTS: Part[] = [
     price: 17000
   },
   {
-    part_id: 70,
+    part_id: "LG_WL061",
     lang_id: 3561,
     part_name: "WL-Hisan",
     part_type: "mobility_base", // wheeled chassis
@@ -579,7 +548,7 @@ export const PARTS: Part[] = [
     price: 18000
   },
   {
-    part_id: 71,
+    part_id: "LG_WL062",
     lang_id: 3562,
     part_name: "WL-Faras",
     part_type: "mobility_base", // wheeled chassis
@@ -587,7 +556,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 72,
+    part_id: "LG_WL063",
     lang_id: 3563,
     part_name: "WL-Jawad",
     part_type: "mobility_base", // wheeled chassis
@@ -595,111 +564,7 @@ export const PARTS: Part[] = [
     price: 20000
   },
   {
-    part_id: 73,
-    lang_id: 3601,
-    part_name: "RFZ-HL-1",
-    part_type: "mobility_base", // hover chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 74,
-    lang_id: 3602,
-    part_name: "RFZ-HL-2",
-    part_type: "mobility_base", // hover chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 75,
-    lang_id: 3603,
-    part_name: "RFZ-TL-1",
-    part_type: "mobility_base", // bipedal chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 76,
-    lang_id: 3604,
-    part_name: "RFZ-TL-2",
-    part_type: "mobility_base", // bipedal chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 77,
-    lang_id: 3605,
-    part_name: "RFZ-WL-1",
-    part_type: "mobility_base", // wheeled chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 78,
-    lang_id: 3606,
-    part_name: "RFZ-WL-2",
-    part_type: "mobility_base", // wheeled chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 79,
-    lang_id: 3607,
-    part_name: "RFZ-RJ-1",
-    part_type: "mobility_base", // inverse chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 80,
-    lang_id: 3608,
-    part_name: "RFZ-RJ-2",
-    part_type: "mobility_base", // inverse chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 81,
-    lang_id: 3609,
-    part_name: "RFZ-ML-1",
-    part_type: "mobility_base", // multi chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 82,
-    lang_id: 3610,
-    part_name: "RFZ-ML-2",
-    part_type: "mobility_base", // multi chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 83,
-    lang_id: 3611,
-    part_name: "RFZ-CL-1",
-    part_type: "mobility_base", // treaded chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 84,
-    lang_id: 3612,
-    part_name: "RFZ-CL-2",
-    part_type: "mobility_base", // treaded chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 85,
-    lang_id: 3613,
-    part_name: "RFZ-CL-X",
-    part_type: "mobility_base", // treaded chassis
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 86,
+    part_id: "",
     lang_id: 3699,
     part_name: "Test myriapod",
     part_type: "mobility_base", // multi chassis
@@ -707,7 +572,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 87,
+    part_id: "GE_GA001",
     lang_id: 4001,
     part_name: "M01G Papin",
     part_type: "generator",
@@ -715,7 +580,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 88,
+    part_id: "GE_GA002",
     lang_id: 4002,
     part_name: "M04G Volta",
     part_type: "generator",
@@ -723,7 +588,7 @@ export const PARTS: Part[] = [
     price: 17000
   },
   {
-    part_id: 89,
+    part_id: "GE_GA031",
     lang_id: 4031,
     part_name: "MSK-G100",
     part_type: "generator",
@@ -731,7 +596,7 @@ export const PARTS: Part[] = [
     price: 12500
   },
   {
-    part_id: 90,
+    part_id: "GE_GA032",
     lang_id: 4032,
     part_name: "MSK-G101",
     part_type: "generator",
@@ -739,7 +604,7 @@ export const PARTS: Part[] = [
     price: 14500
   },
   {
-    part_id: 91,
+    part_id: "GE_GA061",
     lang_id: 4061,
     part_name: "G-Sal Kar",
     part_type: "generator",
@@ -747,7 +612,7 @@ export const PARTS: Part[] = [
     price: 17500
   },
   {
-    part_id: 92,
+    part_id: "GE_GA062",
     lang_id: 4062,
     part_name: "G-Zahara",
     part_type: "generator",
@@ -755,7 +620,7 @@ export const PARTS: Part[] = [
     price: 18500
   },
   {
-    part_id: 93,
+    part_id: "GE_GB001",
     lang_id: 4301,
     part_name: "M02G Franklin",
     part_type: "generator",
@@ -763,7 +628,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 94,
+    part_id: "GE_GB002",
     lang_id: 4302,
     part_name: "M05G Young",
     part_type: "generator",
@@ -771,7 +636,7 @@ export const PARTS: Part[] = [
     price: 20500
   },
   {
-    part_id: 95,
+    part_id: "GE_GB031",
     lang_id: 4331,
     part_name: "MSK-G1000",
     part_type: "generator",
@@ -779,7 +644,7 @@ export const PARTS: Part[] = [
     price: 17500
   },
   {
-    part_id: 96,
+    part_id: "GE_GB032",
     lang_id: 4332,
     part_name: "MSK-G1500",
     part_type: "generator",
@@ -787,7 +652,7 @@ export const PARTS: Part[] = [
     price: 20500
   },
   {
-    part_id: 97,
+    part_id: "GE_GB033",
     lang_id: 4333,
     part_name: "MSK-G1501",
     part_type: "generator",
@@ -795,7 +660,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 98,
+    part_id: "GE_GB061",
     lang_id: 4361,
     part_name: "G-Shajar",
     part_type: "generator",
@@ -803,7 +668,7 @@ export const PARTS: Part[] = [
     price: 21000
   },
   {
-    part_id: 99,
+    part_id: "GE_GC001",
     lang_id: 4601,
     part_name: "M03G Ampere",
     part_type: "generator",
@@ -811,7 +676,7 @@ export const PARTS: Part[] = [
     price: 19000
   },
   {
-    part_id: 100,
+    part_id: "GE_GC002",
     lang_id: 4602,
     part_name: "M06G Nobili",
     part_type: "generator",
@@ -819,7 +684,7 @@ export const PARTS: Part[] = [
     price: 21000
   },
   {
-    part_id: 101,
+    part_id: "GE_GC031",
     lang_id: 4631,
     part_name: "MSK-G10",
     part_type: "generator",
@@ -827,7 +692,7 @@ export const PARTS: Part[] = [
     price: 21000
   },
   {
-    part_id: 102,
+    part_id: "GE_GC061",
     lang_id: 4661,
     part_name: "G-Ushb",
     part_type: "generator",
@@ -835,7 +700,7 @@ export const PARTS: Part[] = [
     price: 20500
   },
   {
-    part_id: 103,
+    part_id: "GE_GC062",
     lang_id: 4662,
     part_name: "G-Kala",
     part_type: "generator",
@@ -843,7 +708,7 @@ export const PARTS: Part[] = [
     price: 22500
   },
   {
-    part_id: 104,
+    part_id: "GE_GC063",
     lang_id: 4663,
     part_name: "G-Saq",
     part_type: "generator",
@@ -851,63 +716,7 @@ export const PARTS: Part[] = [
     price: 24000
   },
   {
-    part_id: 105,
-    lang_id: 4701,
-    part_name: "RFZ-GE-A1",
-    part_type: "generator",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 106,
-    lang_id: 4702,
-    part_name: "RFZ-GE-A2",
-    part_type: "generator",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 107,
-    lang_id: 4703,
-    part_name: "RFZ-GE-A3",
-    part_type: "generator",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 108,
-    lang_id: 4704,
-    part_name: "RFZ-GE-A4",
-    part_type: "generator",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 109,
-    lang_id: 4705,
-    part_name: "RFZ-GE-B1",
-    part_type: "generator",
-    faction: "B",
-    price: null
-  },
-  {
-    part_id: 110,
-    lang_id: 4706,
-    part_name: "RFZ-GE-B2",
-    part_type: "generator",
-    faction: "B",
-    price: null
-  },
-  {
-    part_id: 111,
-    lang_id: 4707,
-    part_name: "RFZ-GE-C1",
-    part_type: "generator",
-    faction: "C",
-    price: null
-  },
-  {
-    part_id: 112,
+    part_id: "AX_AM001",
     lang_id: 5001,
     part_name: "M01AM Gauntlet",
     part_type: "assist_parts", // armor
@@ -915,7 +724,7 @@ export const PARTS: Part[] = [
     price: 3500
   },
   {
-    part_id: 113,
+    part_id: "AX_AM002",
     lang_id: 5002,
     part_name: "M02AM Vambrace",
     part_type: "assist_parts", // armor
@@ -923,7 +732,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 114,
+    part_id: "AX_AM003",
     lang_id: 5003,
     part_name: "M04AM Couter",
     part_type: "assist_parts", // armor
@@ -931,7 +740,7 @@ export const PARTS: Part[] = [
     price: 4250
   },
   {
-    part_id: 115,
+    part_id: "AX_AM011",
     lang_id: 5011,
     part_name: "M03AM Greave",
     part_type: "assist_parts", // armor
@@ -939,7 +748,7 @@ export const PARTS: Part[] = [
     price: 4500
   },
   {
-    part_id: 116,
+    part_id: "AX_AM012",
     lang_id: 5012,
     part_name: "M05AM Poleyn",
     part_type: "assist_parts", // armor
@@ -947,7 +756,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 117,
+    part_id: "AX_AM031",
     lang_id: 5031,
     part_name: "MSK-AM110",
     part_type: "assist_parts", // armor
@@ -955,7 +764,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 118,
+    part_id: "AX_AM032",
     lang_id: 5032,
     part_name: "MSK-AM120",
     part_type: "assist_parts", // armor
@@ -963,7 +772,7 @@ export const PARTS: Part[] = [
     price: 2750
   },
   {
-    part_id: 119,
+    part_id: "AX_AM033",
     lang_id: 5033,
     part_name: "MSK-AM130",
     part_type: "assist_parts", // armor
@@ -971,7 +780,7 @@ export const PARTS: Part[] = [
     price: 3250
   },
   {
-    part_id: 120,
+    part_id: "AX_AM034",
     lang_id: 5034,
     part_name: "MSK-AM100",
     part_type: "assist_parts", // armor
@@ -979,7 +788,7 @@ export const PARTS: Part[] = [
     price: 3900
   },
   {
-    part_id: 121,
+    part_id: "AX_AM041",
     lang_id: 5041,
     part_name: "MSK-AM1000",
     part_type: "assist_parts", // armor
@@ -987,7 +796,7 @@ export const PARTS: Part[] = [
     price: 3000
   },
   {
-    part_id: 122,
+    part_id: "AX_AM042",
     lang_id: 5042,
     part_name: "MSK-AM1100",
     part_type: "assist_parts", // armor
@@ -995,7 +804,7 @@ export const PARTS: Part[] = [
     price: 3400
   },
   {
-    part_id: 123,
+    part_id: "AX_AM043",
     lang_id: 5043,
     part_name: "MSK-AM1200",
     part_type: "assist_parts", // armor
@@ -1003,7 +812,7 @@ export const PARTS: Part[] = [
     price: 3900
   },
   {
-    part_id: 124,
+    part_id: "AX_AM061",
     lang_id: 5061,
     part_name: "AM-Dhahab",
     part_type: "assist_parts", // armor
@@ -1011,7 +820,7 @@ export const PARTS: Part[] = [
     price: 3400
   },
   {
-    part_id: 125,
+    part_id: "AX_AM062",
     lang_id: 5062,
     part_name: "AM-Fidda",
     part_type: "assist_parts", // armor
@@ -1019,7 +828,7 @@ export const PARTS: Part[] = [
     price: 3800
   },
   {
-    part_id: 126,
+    part_id: "AX_AM063",
     lang_id: 5063,
     part_name: "AM-Nuhas",
     part_type: "assist_parts", // armor
@@ -1027,7 +836,7 @@ export const PARTS: Part[] = [
     price: 4000
   },
   {
-    part_id: 127,
+    part_id: "AX_AM071",
     lang_id: 5071,
     part_name: "AM-Hadid",
     part_type: "assist_parts", // armor
@@ -1035,7 +844,7 @@ export const PARTS: Part[] = [
     price: 2800
   },
   {
-    part_id: 128,
+    part_id: "AX_AM072",
     lang_id: 5072,
     part_name: "AM-Safih",
     part_type: "assist_parts", // armor
@@ -1043,31 +852,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 129,
-    lang_id: 5101,
-    part_name: "RFZ-AAM-1",
-    part_type: "assist_parts", // armor
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 130,
-    lang_id: 5102,
-    part_name: "RFZ-AAM-2",
-    part_type: "assist_parts", // armor
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 131,
-    lang_id: 5103,
-    part_name: "RFZ-AAM-3",
-    part_type: "assist_parts", // armor
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 132,
+    part_id: "AX_RD001",
     lang_id: 6001,
     part_name: "M01RD Carnot",
     part_type: "assist_parts", // heat sink
@@ -1075,7 +860,7 @@ export const PARTS: Part[] = [
     price: 2650
   },
   {
-    part_id: 133,
+    part_id: "AX_RD002",
     lang_id: 6002,
     part_name: "M02RD Kelvin",
     part_type: "assist_parts", // heat sink
@@ -1083,7 +868,7 @@ export const PARTS: Part[] = [
     price: 2900
   },
   {
-    part_id: 134,
+    part_id: "AX_RD031",
     lang_id: 6031,
     part_name: "MSK-RD100",
     part_type: "assist_parts", // heat sink
@@ -1091,7 +876,7 @@ export const PARTS: Part[] = [
     price: 3100
   },
   {
-    part_id: 135,
+    part_id: "AX_RD032",
     lang_id: 6032,
     part_name: "MSK-RD110",
     part_type: "assist_parts", // heat sink
@@ -1099,7 +884,7 @@ export const PARTS: Part[] = [
     price: 3250
   },
   {
-    part_id: 136,
+    part_id: "AX_RD033",
     lang_id: 6033,
     part_name: "MSK-RD120",
     part_type: "assist_parts", // heat sink
@@ -1107,7 +892,7 @@ export const PARTS: Part[] = [
     price: 3400
   },
   {
-    part_id: 137,
+    part_id: "AX_RD061",
     lang_id: 6061,
     part_name: "RD-Nahar",
     part_type: "assist_parts", // heat sink
@@ -1115,7 +900,7 @@ export const PARTS: Part[] = [
     price: 3150
   },
   {
-    part_id: 138,
+    part_id: "AX_RD062",
     lang_id: 6062,
     part_name: "RD-Buhayra",
     part_type: "assist_parts", // heat sink
@@ -1123,15 +908,7 @@ export const PARTS: Part[] = [
     price: 3250
   },
   {
-    part_id: 139,
-    lang_id: 6101,
-    part_name: "RFZ-ARD-1",
-    part_type: "assist_parts", // heat sink
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 140,
+    part_id: "AX_SP001",
     lang_id: 7001,
     part_name: "M01SP Born",
     part_type: "spacer",
@@ -1139,7 +916,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 141,
+    part_id: "AX_SP002",
     lang_id: 7002,
     part_name: "M05SP Chest",
     part_type: "spacer",
@@ -1147,7 +924,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 142,
+    part_id: "AX_SP011",
     lang_id: 7011,
     part_name: "M02SP Abdomen",
     part_type: "spacer",
@@ -1155,7 +932,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 143,
+    part_id: "AX_SP012",
     lang_id: 7012,
     part_name: "M04SP Finger",
     part_type: "spacer",
@@ -1163,7 +940,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 144,
+    part_id: "AX_SP021",
     lang_id: 7021,
     part_name: "M03SP Neck",
     part_type: "spacer",
@@ -1171,7 +948,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 145,
+    part_id: "AX_SP022",
     lang_id: 7022,
     part_name: "M06SP Arm",
     part_type: "spacer",
@@ -1179,7 +956,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 146,
+    part_id: "AX_SP031",
     lang_id: 7031,
     part_name: "MSK-SP200",
     part_type: "spacer",
@@ -1187,7 +964,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 147,
+    part_id: "AX_SP032",
     lang_id: 7032,
     part_name: "MSK-SP400",
     part_type: "spacer",
@@ -1195,7 +972,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 148,
+    part_id: "AX_SP041",
     lang_id: 7041,
     part_name: "MSK-SP100",
     part_type: "spacer",
@@ -1203,7 +980,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 149,
+    part_id: "AX_SP042",
     lang_id: 7042,
     part_name: "MSK-SP300",
     part_type: "spacer",
@@ -1211,7 +988,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 150,
+    part_id: "AX_SP051",
     lang_id: 7051,
     part_name: "MSK-SP500",
     part_type: "spacer",
@@ -1219,7 +996,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 151,
+    part_id: "AX_SP052",
     lang_id: 7052,
     part_name: "MSK-SP600",
     part_type: "spacer",
@@ -1227,7 +1004,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 152,
+    part_id: "AX_SP061",
     lang_id: 7061,
     part_name: "SP-Dhira",
     part_type: "spacer",
@@ -1235,7 +1012,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 153,
+    part_id: "AX_SP062",
     lang_id: 7062,
     part_name: "SP-Rijil",
     part_type: "spacer",
@@ -1243,7 +1020,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 154,
+    part_id: "AX_SP071",
     lang_id: 7071,
     part_name: "SP-Sadr",
     part_type: "spacer",
@@ -1251,7 +1028,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 155,
+    part_id: "AX_SP072",
     lang_id: 7072,
     part_name: "SP-Zahr",
     part_type: "spacer",
@@ -1259,7 +1036,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 156,
+    part_id: "AX_SP081",
     lang_id: 7081,
     part_name: "SP-Yad",
     part_type: "spacer",
@@ -1267,7 +1044,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 157,
+    part_id: "AX_SP082",
     lang_id: 7082,
     part_name: "SP-Isba",
     part_type: "spacer",
@@ -1275,31 +1052,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 158,
-    lang_id: 7101,
-    part_name: "RFZ-ASP-1",
-    part_type: "spacer",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 159,
-    lang_id: 7102,
-    part_name: "RFZ-ASP-2",
-    part_type: "spacer",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 160,
-    lang_id: 7103,
-    part_name: "RFZ-ASP-3",
-    part_type: "spacer",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 161,
+    part_id: "AX_FS001",
     lang_id: 8001,
     part_name: "M01FS Boyle",
     part_type: "assist_parts", // fuel tank
@@ -1307,7 +1060,7 @@ export const PARTS: Part[] = [
     price: 1750
   },
   {
-    part_id: 162,
+    part_id: "AX_FS002",
     lang_id: 8002,
     part_name: "M02FS Charles",
     part_type: "assist_parts", // fuel tank
@@ -1315,7 +1068,7 @@ export const PARTS: Part[] = [
     price: 2000
   },
   {
-    part_id: 163,
+    part_id: "AX_FS031",
     lang_id: 8031,
     part_name: "MSK-FS100",
     part_type: "assist_parts", // fuel tank
@@ -1323,7 +1076,7 @@ export const PARTS: Part[] = [
     price: 2500
   },
   {
-    part_id: 164,
+    part_id: "AX_FS032",
     lang_id: 8032,
     part_name: "MSK-FS101",
     part_type: "assist_parts", // fuel tank
@@ -1331,7 +1084,7 @@ export const PARTS: Part[] = [
     price: 2750
   },
   {
-    part_id: 165,
+    part_id: "AX_FS061",
     lang_id: 8061,
     part_name: "FS-Halib",
     part_type: "assist_parts", // fuel tank
@@ -1339,7 +1092,7 @@ export const PARTS: Part[] = [
     price: 2000
   },
   {
-    part_id: 166,
+    part_id: "AX_FS062",
     lang_id: 8062,
     part_name: "FS-Zabadi",
     part_type: "assist_parts", // fuel tank
@@ -1347,15 +1100,7 @@ export const PARTS: Part[] = [
     price: 2250
   },
   {
-    part_id: 167,
-    lang_id: 8101,
-    part_name: "RFZ-AFS-1",
-    part_type: "assist_parts", // fuel tank
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 168,
+    part_id: "AX_RC001",
     lang_id: 9001,
     part_name: "M01RC Cayley",
     part_type: "assist_parts", // rotorcraft
@@ -1363,7 +1108,7 @@ export const PARTS: Part[] = [
     price: 4750
   },
   {
-    part_id: 169,
+    part_id: "AX_RC002",
     lang_id: 9002,
     part_name: "M02RC Wright",
     part_type: "assist_parts", // rotorcraft
@@ -1371,7 +1116,7 @@ export const PARTS: Part[] = [
     price: 5750
   },
   {
-    part_id: 170,
+    part_id: "AX_RC031",
     lang_id: 9031,
     part_name: "MSK-RC100",
     part_type: "assist_parts", // rotorcraft
@@ -1379,7 +1124,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 171,
+    part_id: "AX_RC061",
     lang_id: 9061,
     part_name: "RC-Sununu",
     part_type: "assist_parts", // rotorcraft
@@ -1387,7 +1132,7 @@ export const PARTS: Part[] = [
     price: 4500
   },
   {
-    part_id: 172,
+    part_id: "AX_RC062",
     lang_id: 9062,
     part_name: "RC-Nasr",
     part_type: "assist_parts", // rotorcraft
@@ -1395,7 +1140,7 @@ export const PARTS: Part[] = [
     price: 6000
   },
   {
-    part_id: 173,
+    part_id: "AX_RC063",
     lang_id: 9063,
     part_name: "RC-Saqr",
     part_type: "assist_parts", // rotorcraft
@@ -1403,7 +1148,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 174,
+    part_id: "AX_RC064",
     lang_id: 9064,
     part_name: "RC-Tawus",
     part_type: "assist_parts", // rotorcraft
@@ -1411,15 +1156,7 @@ export const PARTS: Part[] = [
     price: 7250
   },
   {
-    part_id: 175,
-    lang_id: 9101,
-    part_name: "RFZ-ARC-1",
-    part_type: "assist_parts", // rotorcraft
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 176,
+    part_id: "AX_SD001",
     lang_id: 10001,
     part_name: "M03SD Kepler",
     part_type: "assist_parts", // sensors
@@ -1427,7 +1164,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 177,
+    part_id: "AX_SD002",
     lang_id: 10002,
     part_name: "M01SD Huygens",
     part_type: "assist_parts", // sensors
@@ -1435,7 +1172,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 178,
+    part_id: "AX_SD003",
     lang_id: 10003,
     part_name: "M02SD Faraday",
     part_type: "assist_parts", // sensors
@@ -1443,7 +1180,7 @@ export const PARTS: Part[] = [
     price: 7250
   },
   {
-    part_id: 179,
+    part_id: "AX_SD031",
     lang_id: 10031,
     part_name: "MSK-SD110",
     part_type: "assist_parts", // sensors
@@ -1451,7 +1188,7 @@ export const PARTS: Part[] = [
     price: 6000
   },
   {
-    part_id: 180,
+    part_id: "AX_SD032",
     lang_id: 10032,
     part_name: "MSK-SD111",
     part_type: "assist_parts", // sensors
@@ -1459,7 +1196,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 181,
+    part_id: "AX_SD033",
     lang_id: 10033,
     part_name: "MSK-SD100",
     part_type: "assist_parts", // sensors
@@ -1467,7 +1204,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 182,
+    part_id: "AX_SD061",
     lang_id: 10061,
     part_name: "SD-Anf",
     part_type: "assist_parts", // sensors
@@ -1475,7 +1212,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 183,
+    part_id: "AX_SD062",
     lang_id: 10062,
     part_name: "SD-Udhun",
     part_type: "assist_parts", // sensors
@@ -1483,7 +1220,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 184,
+    part_id: "AX_SD063",
     lang_id: 10063,
     part_name: "SD-Ayn",
     part_type: "assist_parts", // sensors
@@ -1491,31 +1228,7 @@ export const PARTS: Part[] = [
     price: 7750
   },
   {
-    part_id: 185,
-    lang_id: 10101,
-    part_name: "RFZ-ASD-N1",
-    part_type: "assist_parts", // sensors
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 186,
-    lang_id: 10102,
-    part_name: "RFZ-ASD-S1",
-    part_type: "assist_parts", // sensors
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 187,
-    lang_id: 10103,
-    part_name: "RFZ-ASD-M1",
-    part_type: "assist_parts", // sensors
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 188,
+    part_id: "AX_MC001",
     lang_id: 11001,
     part_name: "M01MC Shield",
     part_type: "assist_parts", // missile counter
@@ -1523,7 +1236,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 189,
+    part_id: "AX_MC002",
     lang_id: 11002,
     part_name: "M02MC Bucker",
     part_type: "assist_parts", // missile counter
@@ -1531,7 +1244,7 @@ export const PARTS: Part[] = [
     price: 6000
   },
   {
-    part_id: 190,
+    part_id: "AX_MC031",
     lang_id: 11031,
     part_name: "MSK-MC100",
     part_type: "assist_parts", // missile counter
@@ -1539,7 +1252,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 191,
+    part_id: "AX_MC032",
     lang_id: 11032,
     part_name: "MSK-MC200",
     part_type: "assist_parts", // missile counter
@@ -1547,7 +1260,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 192,
+    part_id: "AX_MC061",
     lang_id: 11061,
     part_name: "MS-Rih",
     part_type: "assist_parts", // missile counter
@@ -1555,15 +1268,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 193,
-    lang_id: 11101,
-    part_name: "RFZ-AMS-1",
-    part_type: "assist_parts", // missile counter
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 194,
+    part_id: "AX_JM001",
     lang_id: 12001,
     part_name: "M01JM Sallet",
     part_type: "assist_parts", // na jammer
@@ -1571,7 +1276,7 @@ export const PARTS: Part[] = [
     price: 4500
   },
   {
-    part_id: 195,
+    part_id: "AX_JM002",
     lang_id: 12002,
     part_name: "M02JM Basinet",
     part_type: "assist_parts", // na jammer
@@ -1579,7 +1284,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 196,
+    part_id: "AX_JM031",
     lang_id: 12031,
     part_name: "MSK-JM100",
     part_type: "assist_parts", // na jammer
@@ -1587,7 +1292,7 @@ export const PARTS: Part[] = [
     price: 4250
   },
   {
-    part_id: 197,
+    part_id: "AX_JM061",
     lang_id: 12061,
     part_name: "JM-Barq",
     part_type: "assist_parts", // na jammer
@@ -1595,7 +1300,7 @@ export const PARTS: Part[] = [
     price: 4000
   },
   {
-    part_id: 198,
+    part_id: "AX_JM062",
     lang_id: 12062,
     part_name: "JM-Saiqa",
     part_type: "assist_parts", // na jammer
@@ -1603,7 +1308,7 @@ export const PARTS: Part[] = [
     price: 4500
   },
   {
-    part_id: 199,
+    part_id: "AX_JM063",
     lang_id: 12063,
     part_name: "JM-Rad",
     part_type: "assist_parts", // na jammer
@@ -1611,15 +1316,7 @@ export const PARTS: Part[] = [
     price: 5250
   },
   {
-    part_id: 200,
-    lang_id: 12101,
-    part_name: "RFZ-AJM-1",
-    part_type: "assist_parts", // na jammer
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 201,
+    part_id: "AX_NM001",
     lang_id: 13001,
     part_name: "M01NM Morse",
     part_type: "na_marker",
@@ -1627,7 +1324,7 @@ export const PARTS: Part[] = [
     price: 12500
   },
   {
-    part_id: 202,
+    part_id: "AX_NM002",
     lang_id: 13002,
     part_name: "M02NM Bell",
     part_type: "na_marker",
@@ -1635,7 +1332,7 @@ export const PARTS: Part[] = [
     price: 14000
   },
   {
-    part_id: 203,
+    part_id: "AX_NM003",
     lang_id: 13003,
     part_name: "M03NM Hertz",
     part_type: "na_marker",
@@ -1643,7 +1340,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 204,
+    part_id: "AX_NM004",
     lang_id: 13004,
     part_name: "M04NM Maxwell",
     part_type: "na_marker",
@@ -1651,7 +1348,7 @@ export const PARTS: Part[] = [
     price: 16500
   },
   {
-    part_id: 205,
+    part_id: "AX_NM031",
     lang_id: 13031,
     part_name: "MSK-NM1000",
     part_type: "na_marker",
@@ -1659,7 +1356,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 206,
+    part_id: "AX_NM032",
     lang_id: 13032,
     part_name: "MSK-NM1500",
     part_type: "na_marker",
@@ -1667,7 +1364,7 @@ export const PARTS: Part[] = [
     price: 16000
   },
   {
-    part_id: 207,
+    part_id: "AX_NM033",
     lang_id: 13033,
     part_name: "MSK-NM2000",
     part_type: "na_marker",
@@ -1675,7 +1372,7 @@ export const PARTS: Part[] = [
     price: 18000
   },
   {
-    part_id: 208,
+    part_id: "AX_NM034",
     lang_id: 13034,
     part_name: "MSK-NM2500",
     part_type: "na_marker",
@@ -1683,7 +1380,7 @@ export const PARTS: Part[] = [
     price: 20000
   },
   {
-    part_id: 209,
+    part_id: "AX_NM061",
     lang_id: 13061,
     part_name: "NM-Alkawn",
     part_type: "na_marker",
@@ -1691,7 +1388,7 @@ export const PARTS: Part[] = [
     price: 16500
   },
   {
-    part_id: 210,
+    part_id: "AX_NM062",
     lang_id: 13062,
     part_name: "NM-Ashshams",
     part_type: "na_marker",
@@ -1699,7 +1396,7 @@ export const PARTS: Part[] = [
     price: 18500
   },
   {
-    part_id: 211,
+    part_id: "AX_NM063",
     lang_id: 13063,
     part_name: "NM-Najm",
     part_type: "na_marker",
@@ -1707,7 +1404,7 @@ export const PARTS: Part[] = [
     price: 20000
   },
   {
-    part_id: 212,
+    part_id: "AX_NM064",
     lang_id: 13064,
     part_name: "NM-Kawkab",
     part_type: "na_marker",
@@ -1715,31 +1412,7 @@ export const PARTS: Part[] = [
     price: 21000
   },
   {
-    part_id: 213,
-    lang_id: 13101,
-    part_name: "RFZ-NM-1",
-    part_type: "na_marker",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 214,
-    lang_id: 13102,
-    part_name: "RFZ-NM-2",
-    part_type: "na_marker",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 215,
-    lang_id: 13103,
-    part_name: "RFZ-NM-3",
-    part_type: "na_marker",
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 216,
+    part_id: "WH_HC001",
     lang_id: 14001,
     part_name: "M16HC Bastard",
     part_type: "heavy_arms", // huge cannon
@@ -1747,7 +1420,7 @@ export const PARTS: Part[] = [
     price: 11000
   },
   {
-    part_id: 217,
+    part_id: "WH_HC002",
     lang_id: 14002,
     part_name: "M25HC Gram",
     part_type: "heavy_arms", // huge cannon
@@ -1755,7 +1428,7 @@ export const PARTS: Part[] = [
     price: 13000
   },
   {
-    part_id: 218,
+    part_id: "WH_HC031",
     lang_id: 14031,
     part_name: "MSK-HC1000/O",
     part_type: "heavy_arms", // huge cannon
@@ -1763,7 +1436,7 @@ export const PARTS: Part[] = [
     price: 12500
   },
   {
-    part_id: 219,
+    part_id: "WH_HC032",
     lang_id: 14032,
     part_name: "MSK-HC1001/O",
     part_type: "heavy_arms", // huge cannon
@@ -1771,7 +1444,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 220,
+    part_id: "WH_HC033",
     lang_id: 14033,
     part_name: "MSK-HC1500/D",
     part_type: "heavy_arms", // huge cannon
@@ -1779,7 +1452,7 @@ export const PARTS: Part[] = [
     price: 16500
   },
   {
-    part_id: 221,
+    part_id: "WH_HC034",
     lang_id: 14034,
     part_name: "MSK-HC1501/D",
     part_type: "heavy_arms", // huge cannon
@@ -1787,7 +1460,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 222,
+    part_id: "WH_HC061",
     lang_id: 14061,
     part_name: "HCn-Asifa",
     part_type: "heavy_arms", // huge cannon
@@ -1795,15 +1468,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 223,
-    lang_id: 14101,
-    part_name: "RFZ-WHC-1",
-    part_type: "heavy_arms", // huge cannon
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 224,
+    part_id: "WP_GN001",
     lang_id: 15001,
     part_name: "M01CN Falchion",
     part_type: "light_arms", // cannon
@@ -1811,7 +1476,7 @@ export const PARTS: Part[] = [
     price: 6000
   },
   {
-    part_id: 225,
+    part_id: "WP_GN002",
     lang_id: 15002,
     part_name: "M20CN Anelace",
     part_type: "light_arms", // cannon
@@ -1819,7 +1484,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 226,
+    part_id: "WP_GN003",
     lang_id: 15003,
     part_name: "M27CN Flanberg",
     part_type: "light_arms", // cannon
@@ -1827,7 +1492,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 227,
+    part_id: "WP_GN031",
     lang_id: 15031,
     part_name: "MSK-CN100",
     part_type: "light_arms", // cannon
@@ -1835,7 +1500,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 228,
+    part_id: "WP_GN032",
     lang_id: 15032,
     part_name: "MSK-CN200",
     part_type: "light_arms", // cannon
@@ -1843,7 +1508,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 229,
+    part_id: "WP_GN033",
     lang_id: 15033,
     part_name: "MSK-CN201",
     part_type: "light_arms", // cannon
@@ -1851,7 +1516,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 230,
+    part_id: "WP_GN034",
     lang_id: 15034,
     part_name: "MSK-CN300",
     part_type: "light_arms", // cannon
@@ -1859,7 +1524,7 @@ export const PARTS: Part[] = [
     price: 9000
   },
   {
-    part_id: 231,
+    part_id: "WP_GN061",
     lang_id: 15061,
     part_name: "Cnn-Fasuliya",
     part_type: "light_arms", // cannon
@@ -1867,7 +1532,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 232,
+    part_id: "WP_GN062",
     lang_id: 15062,
     part_name: "Cnn-Bisilla",
     part_type: "light_arms", // cannon
@@ -1875,23 +1540,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 233,
-    lang_id: 15101,
-    part_name: "RFZ-WCN-1",
-    part_type: "light_arms", // cannon
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 234,
-    lang_id: 15102,
-    part_name: "RFZ-WCN-2",
-    part_type: "light_arms", // cannon
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 235,
+    part_id: "WP_HW001",
     lang_id: 16001,
     part_name: "M02HW Espadon",
     part_type: "light_arms", // howitzer
@@ -1899,7 +1548,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 236,
+    part_id: "WP_HW002",
     lang_id: 16002,
     part_name: "M21HW Faus",
     part_type: "light_arms", // howitzer
@@ -1907,7 +1556,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 237,
+    part_id: "WP_HW003",
     lang_id: 16003,
     part_name: "M28HW Pallasch",
     part_type: "light_arms", // howitzer
@@ -1915,7 +1564,7 @@ export const PARTS: Part[] = [
     price: 8500
   },
   {
-    part_id: 238,
+    part_id: "WP_HW031",
     lang_id: 16031,
     part_name: "MSK-HW100",
     part_type: "light_arms", // howitzer
@@ -1923,7 +1572,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 239,
+    part_id: "WP_HW032",
     lang_id: 16032,
     part_name: "MSK-HW200",
     part_type: "light_arms", // howitzer
@@ -1931,7 +1580,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 240,
+    part_id: "WP_HW033",
     lang_id: 16033,
     part_name: "MSK-HW300",
     part_type: "light_arms", // howitzer
@@ -1939,7 +1588,7 @@ export const PARTS: Part[] = [
     price: 10000
   },
   {
-    part_id: 241,
+    part_id: "WP_HW061",
     lang_id: 16061,
     part_name: "Hwz-Matar",
     part_type: "light_arms", // howitzer
@@ -1947,7 +1596,7 @@ export const PARTS: Part[] = [
     price: 8500
   },
   {
-    part_id: 242,
+    part_id: "WP_HW062",
     lang_id: 16062,
     part_name: "Hwz-Thalj",
     part_type: "light_arms", // howitzer
@@ -1955,7 +1604,7 @@ export const PARTS: Part[] = [
     price: 9500
   },
   {
-    part_id: 243,
+    part_id: "WP_HW063",
     lang_id: 16063,
     part_name: "Hwz-Ghayma",
     part_type: "light_arms", // howitzer
@@ -1963,23 +1612,7 @@ export const PARTS: Part[] = [
     price: 10500
   },
   {
-    part_id: 244,
-    lang_id: 16101,
-    part_name: "RFZ-WHW-1",
-    part_type: "light_arms", // howitzer
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 245,
-    lang_id: 16102,
-    part_name: "RFZ-WHW-2",
-    part_type: "light_arms", // howitzer
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 246,
+    part_id: "WP_MT001",
     lang_id: 17001,
     part_name: "M03MT Dusack",
     part_type: "light_arms", // mortar
@@ -1987,7 +1620,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 247,
+    part_id: "WP_MT002",
     lang_id: 17002,
     part_name: "M31MT Falcata",
     part_type: "light_arms", // mortar
@@ -1995,7 +1628,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 248,
+    part_id: "WP_MT031",
     lang_id: 17031,
     part_name: "MSK-MT10",
     part_type: "light_arms", // mortar
@@ -2003,7 +1636,7 @@ export const PARTS: Part[] = [
     price: 5500
   },
   {
-    part_id: 249,
+    part_id: "WP_MT032",
     lang_id: 17032,
     part_name: "MSK-MT20",
     part_type: "light_arms", // mortar
@@ -2011,7 +1644,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 250,
+    part_id: "WP_MT033",
     lang_id: 17033,
     part_name: "MSK-MT21",
     part_type: "light_arms", // mortar
@@ -2019,7 +1652,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 251,
+    part_id: "WP_MT061",
     lang_id: 17061,
     part_name: "Mtr-Qamh",
     part_type: "light_arms", // mortar
@@ -2027,7 +1660,7 @@ export const PARTS: Part[] = [
     price: 5500
   },
   {
-    part_id: 252,
+    part_id: "WP_MT062",
     lang_id: 17062,
     part_name: "Mtr-Hinta",
     part_type: "light_arms", // mortar
@@ -2035,7 +1668,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 253,
+    part_id: "WP_MT063",
     lang_id: 17063,
     part_name: "Mtr-Shair",
     part_type: "light_arms", // mortar
@@ -2043,31 +1676,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 254,
-    lang_id: 17101,
-    part_name: "RFZ-WMT-1",
-    part_type: "light_arms", // mortar
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 255,
-    lang_id: 17102,
-    part_name: "RFZ-WMT-2",
-    part_type: "light_arms", // mortar
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 256,
-    lang_id: 17103,
-    part_name: "RFZ-WMT-3",
-    part_type: "light_arms", // mortar
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 257,
+    part_id: "WP_SG001",
     lang_id: 18001,
     part_name: "M04SC Epee",
     part_type: "light_arms", // sniper cannon
@@ -2075,7 +1684,7 @@ export const PARTS: Part[] = [
     price: 9000
   },
   {
-    part_id: 258,
+    part_id: "WP_SG002",
     lang_id: 18002,
     part_name: "M22SC Fleuret",
     part_type: "light_arms", // sniper cannon
@@ -2083,7 +1692,7 @@ export const PARTS: Part[] = [
     price: 11000
   },
   {
-    part_id: 259,
+    part_id: "WP_SG003",
     lang_id: 18003,
     part_name: "M36SC Sabre",
     part_type: "light_arms", // sniper cannon
@@ -2091,7 +1700,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 260,
+    part_id: "WP_SG031",
     lang_id: 18031,
     part_name: "MSK-SC100",
     part_type: "light_arms", // sniper cannon
@@ -2099,7 +1708,7 @@ export const PARTS: Part[] = [
     price: 11000
   },
   {
-    part_id: 261,
+    part_id: "WP_SG032",
     lang_id: 18032,
     part_name: "MSK-SC200",
     part_type: "light_arms", // sniper cannon
@@ -2107,7 +1716,7 @@ export const PARTS: Part[] = [
     price: 13000
   },
   {
-    part_id: 262,
+    part_id: "WP_SG061",
     lang_id: 18061,
     part_name: "SpC-Himmis",
     part_type: "light_arms", // sniper cannon
@@ -2115,15 +1724,7 @@ export const PARTS: Part[] = [
     price: 12000
   },
   {
-    part_id: 263,
-    lang_id: 18101,
-    part_name: "RFZ-WSC-1",
-    part_type: "light_arms", // sniper cannon
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 264,
+    part_id: "WP_SR001",
     lang_id: 19001,
     part_name: "M05SR Estoc",
     part_type: "light_arms", // sniper rifle
@@ -2131,7 +1732,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 265,
+    part_id: "WP_SR002",
     lang_id: 19002,
     part_name: "M17SR Tuck",
     part_type: "light_arms", // sniper rifle
@@ -2139,7 +1740,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 266,
+    part_id: "WP_SR003",
     lang_id: 19003,
     part_name: "M35SR Rapir",
     part_type: "light_arms", // sniper rifle
@@ -2147,7 +1748,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 267,
+    part_id: "WP_SR031",
     lang_id: 19031,
     part_name: "MSK-SR100",
     part_type: "light_arms", // sniper rifle
@@ -2155,7 +1756,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 268,
+    part_id: "WP_SR032",
     lang_id: 19032,
     part_name: "MSK-SR200",
     part_type: "light_arms", // sniper rifle
@@ -2163,7 +1764,7 @@ export const PARTS: Part[] = [
     price: 10000
   },
   {
-    part_id: 269,
+    part_id: "WP_SR061",
     lang_id: 19061,
     part_name: "SpR-Aruzz",
     part_type: "light_arms", // sniper rifle
@@ -2171,7 +1772,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 270,
+    part_id: "WP_SR062",
     lang_id: 19062,
     part_name: "SpR-Ruzz",
     part_type: "light_arms", // sniper rifle
@@ -2179,23 +1780,7 @@ export const PARTS: Part[] = [
     price: 4000
   },
   {
-    part_id: 271,
-    lang_id: 19101,
-    part_name: "RFZ-WSR-1",
-    part_type: "light_arms", // sniper rifle
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 272,
-    lang_id: 19102,
-    part_name: "RFZ-WSR-2",
-    part_type: "light_arms", // sniper rifle
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 273,
+    part_id: "WP_AR001",
     lang_id: 20001,
     part_name: "M06AR Baselard",
     part_type: "light_arms", // assault rifle
@@ -2203,7 +1788,7 @@ export const PARTS: Part[] = [
     price: 6000
   },
   {
-    part_id: 274,
+    part_id: "WP_AR002",
     lang_id: 20002,
     part_name: "M19AR Cutlass",
     part_type: "light_arms", // assault rifle
@@ -2211,7 +1796,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 275,
+    part_id: "WP_AR003",
     lang_id: 20003,
     part_name: "M34AR Hanger",
     part_type: "light_arms", // assault rifle
@@ -2219,7 +1804,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 276,
+    part_id: "WP_AR031",
     lang_id: 20031,
     part_name: "MSK-AR100",
     part_type: "light_arms", // assault rifle
@@ -2227,7 +1812,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 277,
+    part_id: "WP_AR032",
     lang_id: 20032,
     part_name: "MSK-AR200",
     part_type: "light_arms", // assault rifle
@@ -2235,7 +1820,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 278,
+    part_id: "WP_AR061",
     lang_id: 20061,
     part_name: "AsR-Thuban",
     part_type: "light_arms", // assault rifle
@@ -2243,7 +1828,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 279,
+    part_id: "WP_AR062",
     lang_id: 20062,
     part_name: "AsR-Timsah",
     part_type: "light_arms", // assault rifle
@@ -2251,31 +1836,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 280,
-    lang_id: 20101,
-    part_name: "RFZ-WAR-1",
-    part_type: "light_arms", // assault rifle
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 281,
-    lang_id: 20131,
-    part_name: "RFZ-WAR-3",
-    part_type: "light_arms", // assault rifle
-    faction: "B",
-    price: null
-  },
-  {
-    part_id: 282,
-    lang_id: 20161,
-    part_name: "RFZ-WAR-2",
-    part_type: "light_arms", // assault rifle
-    faction: "C",
-    price: null
-  },
-  {
-    part_id: 283,
+    part_id: "WP_MG001",
     lang_id: 21001,
     part_name: "M18MG Stylet",
     part_type: "light_arms", // machine gun
@@ -2283,7 +1844,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 284,
+    part_id: "WP_MG002",
     lang_id: 21002,
     part_name: "M07MG Dagger",
     part_type: "light_arms", // machine gun
@@ -2291,7 +1852,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 285,
+    part_id: "WP_MG031",
     lang_id: 21031,
     part_name: "MSK-MG100",
     part_type: "light_arms", // machine gun
@@ -2299,7 +1860,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 286,
+    part_id: "WP_MG061",
     lang_id: 21061,
     part_name: "Mcg-Hamama",
     part_type: "light_arms", // machine gun
@@ -2307,7 +1868,7 @@ export const PARTS: Part[] = [
     price: 5500
   },
   {
-    part_id: 287,
+    part_id: "WP_MG062",
     lang_id: 21062,
     part_name: "Mcg-Hajal",
     part_type: "light_arms", // machine gun
@@ -2315,31 +1876,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 288,
-    lang_id: 21101,
-    part_name: "RFZ-WMG-1",
-    part_type: "light_arms", // machine gun
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 289,
-    lang_id: 21102,
-    part_name: "RFZ-WMG-2",
-    part_type: "light_arms", // machine gun
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 290,
-    lang_id: 21103,
-    part_name: "RFZ-WMG-3",
-    part_type: "light_arms", // machine gun
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 291,
+    part_id: "WP_ST001",
     lang_id: 22001,
     part_name: "M08SG Club",
     part_type: "light_arms", // shotgun
@@ -2347,7 +1884,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 292,
+    part_id: "WP_ST002",
     lang_id: 22002,
     part_name: "M24SG Mace",
     part_type: "light_arms", // shotgun
@@ -2355,7 +1892,7 @@ export const PARTS: Part[] = [
     price: 8500
   },
   {
-    part_id: 293,
+    part_id: "WP_ST031",
     lang_id: 22031,
     part_name: "MSK-SG100",
     part_type: "light_arms", // shotgun
@@ -2363,7 +1900,7 @@ export const PARTS: Part[] = [
     price: 9000
   },
   {
-    part_id: 294,
+    part_id: "WP_ST032",
     lang_id: 22032,
     part_name: "MSK-SG200/D",
     part_type: "light_arms", // shotgun
@@ -2371,7 +1908,7 @@ export const PARTS: Part[] = [
     price: 11500
   },
   {
-    part_id: 295,
+    part_id: "WP_ST033",
     lang_id: 22033,
     part_name: "MSK-SG101",
     part_type: "light_arms", // shotgun
@@ -2379,7 +1916,7 @@ export const PARTS: Part[] = [
     price: 10000
   },
   {
-    part_id: 296,
+    part_id: "WP_ST061",
     lang_id: 22061,
     part_name: "Stg-Burum",
     part_type: "light_arms", // shotgun
@@ -2387,23 +1924,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 297,
-    lang_id: 22101,
-    part_name: "RFZ-WSG-1",
-    part_type: "light_arms", // shotgun
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 298,
-    lang_id: 22102,
-    part_name: "RFZ-WSG-2",
-    part_type: "light_arms", // shotgun
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 299,
+    part_id: "WP_GL001",
     lang_id: 23001,
     part_name: "M09GL Adze",
     part_type: "light_arms", // grenade
@@ -2411,7 +1932,7 @@ export const PARTS: Part[] = [
     price: 5000
   },
   {
-    part_id: 300,
+    part_id: "WP_GL002",
     lang_id: 23002,
     part_name: "M30GL Axe",
     part_type: "light_arms", // grenade
@@ -2419,7 +1940,7 @@ export const PARTS: Part[] = [
     price: 5500
   },
   {
-    part_id: 301,
+    part_id: "WP_GL031",
     lang_id: 23031,
     part_name: "MSK-GL10",
     part_type: "light_arms", // grenade
@@ -2427,7 +1948,7 @@ export const PARTS: Part[] = [
     price: 6750
   },
   {
-    part_id: 302,
+    part_id: "WP_GL061",
     lang_id: 23061,
     part_name: "Grl-Mushmis",
     part_type: "light_arms", // grenade
@@ -2435,7 +1956,7 @@ export const PARTS: Part[] = [
     price: 4500
   },
   {
-    part_id: 303,
+    part_id: "WP_GL062",
     lang_id: 23062,
     part_name: "Grl-Ghaim",
     part_type: "light_arms", // grenade
@@ -2443,7 +1964,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 304,
+    part_id: "WP_GL063",
     lang_id: 23063,
     part_name: "Grl-Mumtir",
     part_type: "light_arms", // grenade
@@ -2451,15 +1972,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 305,
-    lang_id: 23101,
-    part_name: "RFZ-WGL-1",
-    part_type: "light_arms", // grenade
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 306,
+    part_id: "WP_CR001",
     lang_id: 24001,
     part_name: "M09HT Spear",
     part_type: "light_arms", // heat rocket
@@ -2467,7 +1980,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 307,
+    part_id: "WP_CR002",
     lang_id: 24002,
     part_name: "M33HT Partisan",
     part_type: "light_arms", // heat rocket
@@ -2475,7 +1988,7 @@ export const PARTS: Part[] = [
     price: 9000
   },
   {
-    part_id: 308,
+    part_id: "WP_CR031",
     lang_id: 24031,
     part_name: "MSK-HT10",
     part_type: "light_arms", // heat rocket
@@ -2483,7 +1996,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 309,
+    part_id: "WP_CR061",
     lang_id: 24061,
     part_name: "HTR-Jazar",
     part_type: "light_arms", // heat rocket
@@ -2491,7 +2004,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 310,
+    part_id: "WP_CR062",
     lang_id: 24062,
     part_name: "HTR-Khiyar",
     part_type: "light_arms", // heat rocket
@@ -2499,7 +2012,7 @@ export const PARTS: Part[] = [
     price: 9500
   },
   {
-    part_id: 311,
+    part_id: "WP_CR063",
     lang_id: 24063,
     part_name: "HTR-Tamatim",
     part_type: "light_arms", // heat rocket
@@ -2507,23 +2020,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 312,
-    lang_id: 24101,
-    part_name: "RFZ-WHT-1",
-    part_type: "light_arms", // heat rocket
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 313,
-    lang_id: 24102,
-    part_name: "RFZ-WHT-2",
-    part_type: "light_arms", // heat rocket
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 314,
+    part_id: "WP_CP001",
     lang_id: 25001,
     part_name: "M10HP Lance",
     part_type: "light_arms", // anti hound pile
@@ -2531,7 +2028,7 @@ export const PARTS: Part[] = [
     price: 11000
   },
   {
-    part_id: 315,
+    part_id: "WP_CP002",
     lang_id: 25002,
     part_name: "M32HP Ballista",
     part_type: "light_arms", // anti hound pile
@@ -2539,7 +2036,7 @@ export const PARTS: Part[] = [
     price: 12500
   },
   {
-    part_id: 316,
+    part_id: "WP_CP031",
     lang_id: 25031,
     part_name: "MSK-HP100",
     part_type: "light_arms", // anti hound pile
@@ -2547,7 +2044,7 @@ export const PARTS: Part[] = [
     price: 14000
   },
   {
-    part_id: 317,
+    part_id: "WP_CP061",
     lang_id: 25061,
     part_name: "AHP-Ras",
     part_type: "light_arms", // anti hound pile
@@ -2555,7 +2052,7 @@ export const PARTS: Part[] = [
     price: 10000
   },
   {
-    part_id: 318,
+    part_id: "WP_CP062",
     lang_id: 25062,
     part_name: "AHP-Sharib",
     part_type: "light_arms", // anti hound pile
@@ -2563,7 +2060,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 319,
+    part_id: "WP_CP063",
     lang_id: 25063,
     part_name: "AHP-Lihya",
     part_type: "light_arms", // anti hound pile
@@ -2571,15 +2068,7 @@ export const PARTS: Part[] = [
     price: 13000
   },
   {
-    part_id: 320,
-    lang_id: 25101,
-    part_name: "RFZ-WHP-1",
-    part_type: "light_arms", // anti hound pile
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 321,
+    part_id: "WP_LM001",
     lang_id: 26001,
     part_name: "M11LM Claymore",
     part_type: "light_arms", // land mine
@@ -2587,7 +2076,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 322,
+    part_id: "WP_LM031",
     lang_id: 26031,
     part_name: "MSK-LM100",
     part_type: "light_arms", // land mine
@@ -2595,7 +2084,7 @@ export const PARTS: Part[] = [
     price: 6500
   },
   {
-    part_id: 323,
+    part_id: "WP_LM032",
     lang_id: 26032,
     part_name: "MSK-LM200",
     part_type: "light_arms", // land mine
@@ -2603,7 +2092,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 324,
+    part_id: "WP_LM061",
     lang_id: 26061,
     part_name: "LdM-Harshafa",
     part_type: "light_arms", // land mine
@@ -2611,7 +2100,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 325,
+    part_id: "WP_LM062",
     lang_id: 26062,
     part_name: "LdM-Zinifa",
     part_type: "light_arms", // land mine
@@ -2619,7 +2108,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 326,
+    part_id: "WP_LM063",
     lang_id: 26063,
     part_name: "LdM-Lahm",
     part_type: "light_arms", // land mine
@@ -2627,23 +2116,7 @@ export const PARTS: Part[] = [
     price: 8750
   },
   {
-    part_id: 327,
-    lang_id: 26101,
-    part_name: "RFZ-WLM-1",
-    part_type: "light_arms", // land mine
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 328,
-    lang_id: 26102,
-    part_name: "RFZ-WLM-2",
-    part_type: "light_arms", // land mine
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 329,
+    part_id: "WP_CB001",
     lang_id: 27001,
     part_name: "M12BD Gladius",
     part_type: "light_arms", // bomb dispenser
@@ -2651,7 +2124,7 @@ export const PARTS: Part[] = [
     price: 7000
   },
   {
-    part_id: 330,
+    part_id: "WP_CB002",
     lang_id: 27002,
     part_name: "M23BD Walloon",
     part_type: "light_arms", // bomb dispenser
@@ -2659,7 +2132,7 @@ export const PARTS: Part[] = [
     price: 7500
   },
   {
-    part_id: 331,
+    part_id: "WP_CB031",
     lang_id: 27031,
     part_name: "MSK-BD100",
     part_type: "light_arms", // bomb dispenser
@@ -2667,7 +2140,7 @@ export const PARTS: Part[] = [
     price: 8000
   },
   {
-    part_id: 332,
+    part_id: "WP_CB061",
     lang_id: 27061,
     part_name: "BmD-Sardin",
     part_type: "light_arms", // bomb dispenser
@@ -2675,7 +2148,7 @@ export const PARTS: Part[] = [
     price: 8250
   },
   {
-    part_id: 333,
+    part_id: "WP_CB062",
     lang_id: 27062,
     part_name: "BmD-Salmun",
     part_type: "light_arms", // bomb dispenser
@@ -2683,7 +2156,7 @@ export const PARTS: Part[] = [
     price: 8500
   },
   {
-    part_id: 334,
+    part_id: "WP_CB063",
     lang_id: 27063,
     part_name: "BmD-Samakumusa",
     part_type: "light_arms", // bomb dispenser
@@ -2691,7 +2164,7 @@ export const PARTS: Part[] = [
     price: 9000
   },
   {
-    part_id: 335,
+    part_id: "WP_CB064",
     lang_id: 27064,
     part_name: "BmD-Sadaf",
     part_type: "light_arms", // bomb dispenser
@@ -2699,23 +2172,7 @@ export const PARTS: Part[] = [
     price: 8750
   },
   {
-    part_id: 336,
-    lang_id: 27101,
-    part_name: "RFZ-WBD-1",
-    part_type: "light_arms", // bomb dispenser
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 337,
-    lang_id: 27161,
-    part_name: "RFZ-WBD-2",
-    part_type: "light_arms", // bomb dispenser
-    faction: "C",
-    price: null
-  },
-  {
-    part_id: 338,
+    part_id: "WP_RL002",
     lang_id: 28002,
     part_name: "M13RL Halberd",
     part_type: "light_arms", // rocket
@@ -2723,7 +2180,7 @@ export const PARTS: Part[] = [
     price: 11500
   },
   {
-    part_id: 339,
+    part_id: "WP_RL033",
     lang_id: 28033,
     part_name: "MSK-RL100",
     part_type: "light_arms", // rocket
@@ -2731,7 +2188,7 @@ export const PARTS: Part[] = [
     price: 12500
   },
   {
-    part_id: 340,
+    part_id: "WP_RL034",
     lang_id: 28034,
     part_name: "MSK-RL200",
     part_type: "light_arms", // rocket
@@ -2739,7 +2196,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 341,
+    part_id: "WP_RL061",
     lang_id: 28061,
     part_name: "Rtl-Khass",
     part_type: "light_arms", // rocket
@@ -2747,7 +2204,7 @@ export const PARTS: Part[] = [
     price: 12000
   },
   {
-    part_id: 342,
+    part_id: "WP_RL062",
     lang_id: 28062,
     part_name: "Rtl-Kurunb",
     part_type: "light_arms", // rocket
@@ -2755,23 +2212,7 @@ export const PARTS: Part[] = [
     price: 13000
   },
   {
-    part_id: 343,
-    lang_id: 28101,
-    part_name: "RFZ-WRL-1",
-    part_type: "light_arms", // rocket
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 344,
-    lang_id: 28102,
-    part_name: "RFZ-WRL-2",
-    part_type: "light_arms", // rocket
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 345,
+    part_id: "WH_LR001",
     lang_id: 29001,
     part_name: "M15HR Guisarme",
     part_type: "heavy_arms", // huge rocket
@@ -2779,7 +2220,7 @@ export const PARTS: Part[] = [
     price: 12500
   },
   {
-    part_id: 346,
+    part_id: "WH_LR002",
     lang_id: 29002,
     part_name: "M29HR Trident",
     part_type: "heavy_arms", // huge rocket
@@ -2787,7 +2228,7 @@ export const PARTS: Part[] = [
     price: 14000
   },
   {
-    part_id: 347,
+    part_id: "WH_LR031",
     lang_id: 29031,
     part_name: "MSK-HR1000",
     part_type: "heavy_arms", // huge rocket
@@ -2795,7 +2236,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 348,
+    part_id: "WH_LR032",
     lang_id: 29032,
     part_name: "MSK-HR1001",
     part_type: "heavy_arms", // huge rocket
@@ -2803,7 +2244,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 349,
+    part_id: "WH_LR061",
     lang_id: 29061,
     part_name: "HRl-Basal",
     part_type: "heavy_arms", // huge rocket
@@ -2811,15 +2252,7 @@ export const PARTS: Part[] = [
     price: 14500
   },
   {
-    part_id: 350,
-    lang_id: 29101,
-    part_name: "RFZ-WHR-1",
-    part_type: "heavy_arms", // huge rocket
-    faction: "A",
-    price: null
-  },
-  {
-    part_id: 351,
+    part_id: "WH_MS001",
     lang_id: 30001,
     part_name: "M14MS Javelin",
     part_type: "heavy_arms", // missile
@@ -2827,7 +2260,7 @@ export const PARTS: Part[] = [
     price: 15000
   },
   {
-    part_id: 352,
+    part_id: "WH_MS002",
     lang_id: 30002,
     part_name: "M26MS Tomahawk",
     part_type: "heavy_arms", // missile
@@ -2835,7 +2268,7 @@ export const PARTS: Part[] = [
     price: 16500
   },
   {
-    part_id: 353,
+    part_id: "WH_MS031",
     lang_id: 30031,
     part_name: "MSK-MS1000",
     part_type: "heavy_arms", // missile
@@ -2843,7 +2276,7 @@ export const PARTS: Part[] = [
     price: 14500
   },
   {
-    part_id: 354,
+    part_id: "WH_MS032",
     lang_id: 30032,
     part_name: "MSK-MS1500",
     part_type: "heavy_arms", // missile
@@ -2851,7 +2284,7 @@ export const PARTS: Part[] = [
     price: 16000
   },
   {
-    part_id: 355,
+    part_id: "WH_MS033",
     lang_id: 30033,
     part_name: "MSK-MS1001",
     part_type: "heavy_arms", // missile
@@ -2859,7 +2292,7 @@ export const PARTS: Part[] = [
     price: null
   },
   {
-    part_id: 356,
+    part_id: "WH_MS034",
     lang_id: 30034,
     part_name: "MSK-MS1501",
     part_type: "heavy_arms", // missile
@@ -2867,7 +2300,7 @@ export const PARTS: Part[] = [
     price: 17500
   },
   {
-    part_id: 357,
+    part_id: "WH_MS061",
     lang_id: 30061,
     part_name: "Msl-Khadrawat",
     part_type: "heavy_arms", // missile
@@ -2875,20 +2308,180 @@ export const PARTS: Part[] = [
     price: 14000
   },
   {
-    part_id: 358,
-    lang_id: 30101,
-    part_name: "RFZ-WMS-1",
-    part_type: "heavy_arms", // missile
+    part_id: "CP_MC001",
+    lang_id: 73001,
+    part_name: "M01MC Russell",
+    part_type: "system_device", // main computer
     faction: "A",
-    price: null
+    price: 4000
+  },
+  {
+    part_id: "CP_MC002",
+    lang_id: 73002,
+    part_name: "M02MC Neumann",
+    part_type: "system_device", // main computer
+    faction: "A",
+    price: 4500
+  },
+  {
+    part_id: "CP_MC031",
+    lang_id: 73031,
+    part_name: "MSK-MC1000",
+    part_type: "system_device", // main computer
+    faction: "B",
+    price: 3500
+  },
+  {
+    part_id: "CP_MC032",
+    lang_id: 73032,
+    part_name: "MSK-MC1500",
+    part_type: "system_device", // main computer
+    faction: "B",
+    price: 3750
+  },
+  {
+    part_id: "CP_MC061",
+    lang_id: 73061,
+    part_name: "MC-Wahid",
+    part_type: "system_device", // main computer
+    faction: "C",
+    price: 4500
+  },
+  {
+    part_id: "CP_MC062",
+    lang_id: 73062,
+    part_name: "MC-Arbaa",
+    part_type: "system_device", // main computer
+    faction: "C",
+    price: 5500
+  },
+  {
+    part_id: "CP_MC063",
+    lang_id: 73063,
+    part_name: "MC-Saba",
+    part_type: "system_device", // main computer
+    faction: "C",
+    price: 6000
+  },
+  {
+    part_id: "CP_AS001",
+    lang_id: 73201,
+    part_name: "M01TC Bardeen",
+    part_type: "system_device", // tactical computer
+    faction: "A",
+    price: 4000
+  },
+  {
+    part_id: "CP_AS002",
+    lang_id: 73202,
+    part_name: "M02TC Brattain",
+    part_type: "system_device", // tactical computer
+    faction: "A",
+    price: 4500
+  },
+  {
+    part_id: "CP_AS031",
+    lang_id: 73231,
+    part_name: "MSK-TC1000",
+    part_type: "system_device", // tactical computer
+    faction: "B",
+    price: 5500
+  },
+  {
+    part_id: "CP_AS032",
+    lang_id: 73232,
+    part_name: "MSK-TC1500",
+    part_type: "system_device", // tactical computer
+    faction: "B",
+    price: 5000
+  },
+  {
+    part_id: "CP_AS033",
+    lang_id: 73233,
+    part_name: "MSK-TC2000",
+    part_type: "system_device", // tactical computer
+    faction: "B",
+    price: 6000
+  },
+  {
+    part_id: "CP_AS061",
+    lang_id: 73261,
+    part_name: "TC-Ithnan",
+    part_type: "system_device", // tactical computer
+    faction: "C",
+    price: 4500
+  },
+  {
+    part_id: "CP_AS062",
+    lang_id: 73262,
+    part_name: "TC-Sitta",
+    part_type: "system_device", // tactical computer
+    faction: "C",
+    price: 4250
+  },
+  {
+    part_id: "CP_CT001",
+    lang_id: 73401,
+    part_name: "M01RC Hopper",
+    part_type: "system_device", // RC
+    faction: "A",
+    price: 5000
+  },
+  {
+    part_id: "CP_CT002",
+    lang_id: 73402,
+    part_name: "M02RC Backus",
+    part_type: "system_device", // RC
+    faction: "A",
+    price: 5500
+  },
+  {
+    part_id: "CP_CT003",
+    lang_id: 73403,
+    part_name: "M03RC Mccarthy",
+    part_type: "system_device", // RC
+    faction: "A",
+    price: 5750
+  },
+  {
+    part_id: "CP_CT031",
+    lang_id: 73431,
+    part_name: "MSK-RC1000",
+    part_type: "system_device", // RC
+    faction: "B",
+    price: 4500
+  },
+  {
+    part_id: "CP_CT032",
+    lang_id: 73432,
+    part_name: "MSK-RC1500",
+    part_type: "system_device", // RC
+    faction: "B",
+    price: 4250
+  },
+  {
+    part_id: "CP_CT061",
+    lang_id: 73461,
+    part_name: "RC-Thalatha",
+    part_type: "system_device", // RC
+    faction: "C",
+    price: 3500
+  },
+  {
+    part_id: "CP_CT062",
+    lang_id: 73462,
+    part_name: "RC-Khamsa",
+    part_type: "system_device", // RC
+    faction: "C",
+    price: 4000
   }
 ];
 
-export const PARTS_BY_ID: ReadonlyMap<number, Part> = new Map(
+export const PARTS_BY_ID: ReadonlyMap<string, Part> = new Map(
   PARTS.map((part) => [part.part_id, part]),
 );
 
-export function getPartById(partId: number): Part | undefined {
+export function getPartById(partId: string): Part | undefined {
   return PARTS_BY_ID.get(partId);
 }
 
