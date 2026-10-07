@@ -66,8 +66,12 @@ export class SquadServerService extends BaseUdpService {
       `\x1b[36m${xuidInfo}${playerInfo}${factionInfo}${sequenceInfo}${additionalInfo}\x1b[0m`
     );
     
-    // Need to decode structure for response. 
-    const response = Buffer.from('430000001111111111110000000000000000003130303030303030321100000000', 'hex');
+    // A non-zero status is an empty team. The lobby clears the local squad
+    // instead of trying to join one.
+    const HEADER = 0x20;
+    const response = Buffer.alloc(HEADER + 0x4e0);
+    msg.copy(response, 0, 0, Math.min(HEADER, msg.length));
+    response.writeUInt8(1, HEADER);
     this.sendResponse(response, rinfo);
   }
 }
